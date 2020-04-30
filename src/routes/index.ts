@@ -1,9 +1,7 @@
 import { Router } from 'express';
+import exampleRouter from './example.routes';
 
 const routes = Router();
 
-routes.get('/', (request, response) =>
-  response.json({ message: 'rota teste' }),
-);
-
+routes.use('/example', exampleRouter);
 export default routes;
